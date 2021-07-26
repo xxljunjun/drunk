@@ -1,49 +1,44 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+  <view class="home">
+    {{ token }}
+    <button @click="getWheather">迪阿敏我</button>
+    <TabBar />
+  </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	}
+import TabBar from '@/components/tabBar.vue'
+import { getWeather } from '@/serve/api/index.js'
+export default {
+  data() {
+    return {
+      token: '',
+    }
+  },
+  mounted() {},
+  onLoad() {
+    this.token = this.$store.state.token
+    console.log('00000000', this.$store.state.token)
+  },
+  methods: {
+    getWheather() {
+      let params = {
+        city: '深圳',
+        appkey: '7a85fc9df58cd155f764e033a257d879',
+      }
+      getWeather(params).then((res) => {
+        console.log('获取天气', res)
+      })
+    },
+  },
+  components: {
+    TabBar,
+  },
+}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+<style lang="scss" scoped>
+.home {
+  color: #000;
+}
 </style>

@@ -71,10 +71,19 @@ app.$mount()
         }
     }
 
-#### 五、导航栏与状态栏重叠
-"app-plus": { 
-	/* 导航栏和状态栏重叠问题 */
-	"statusbar": {
-		"immersed": false
-	},
+#### 五、预留状态栏位置
+```
+<view class="status_bar"> <!-- 这里是状态栏 --> </view>
+.status_bar {
+  height: var(--status-bar-height);
+  width: 100%;
 }
+```
+
+#### 六、如何调试uniapp的微信小程序
++ 1、安装微信者开发工具
++ 2、在h-builder上设置微信者开发工具的安装路径
++ 3、在h-builder上设置端口号http://10.240.5.230:64579
++ 4、在h-builder上运行到小程序
++ 5、发行
+

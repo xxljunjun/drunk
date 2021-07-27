@@ -1,7 +1,7 @@
 //把配置项单独处理
 
 import store from '@/store/index.js'; //vuex  
-let server_url = 'http://127.0.0.1:64579';//请求地址
+let server_url = 'http://127.0.0.1:47238';//请求地址
 let token = ' '; //凭证
 // process.env.NODE_ENV === 'development' ? '192.168.0.1' : 'http://***/api'; //环境配置
 function service(options = {}) {

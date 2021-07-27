@@ -1,5 +1,6 @@
 <template>
-  <view class="home">
+  <view class="mine">
+    333333333333
     <TabBar />
   </view>
 </template>
@@ -22,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
+.mine {
   color: #000;
 }
 </style>

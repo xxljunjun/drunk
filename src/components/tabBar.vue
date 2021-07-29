@@ -72,7 +72,7 @@ export default {
       margin-bottom: 8rpx;
     }
     .txt {
-      font-size: 16rpx;
+      font-size: 22rpx;
       color: #000;
     }
   }

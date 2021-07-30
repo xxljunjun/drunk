@@ -1,18 +1,18 @@
 <template>
   <view class="tabBar">
-    <view class="item" @tap="goToTabBar(0)">
+    <view class="item" @click="goToTabBar(0)">
       <image src="/static/logo.png" class="icon" />
       <view class="txt">首页</view>
     </view>
-    <view class="item" @tap="goToTabBar(1)">
+    <view class="item" @click="goToTabBar(1)">
       <image src="/static/logo.png" class="icon" />
       <view class="txt">点餐</view>
     </view>
-    <view class="item" @tap="goToTabBar(2)">
+    <view class="item" @click="goToTabBar(2)">
       <image src="/static/logo.png" class="icon" />
       <view class="txt">订单</view>
     </view>
-    <view class="item" @tap="goToTabBar(3)">
+    <view class="item" @click="goToTabBar(3)">
       <image src="/static/logo.png" class="icon" />
       <view class="txt">我的</view>
     </view>

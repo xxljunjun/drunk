@@ -56,6 +56,7 @@ export default {
   .fixd {
     position: fixed;
     top: 0;
+    z-index: 99;
     background: #fff;
     //uniapp自带的变量控制状态栏
     .status_bar {
@@ -113,6 +114,7 @@ export default {
           align-items: center;
           justify-content: center;
           color: #fff;
+          margin-left: 10rpx;
         }
         .txt-4 {
           width: 90rpx;
@@ -122,6 +124,7 @@ export default {
           flex-direction: row;
           align-items: center;
           justify-content: center;
+          margin-right: 10rpx;
         }
       }
     }

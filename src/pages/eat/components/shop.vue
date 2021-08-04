@@ -43,21 +43,29 @@
       <view class="main">
         <view class="box" v-for="item in listArr" :key="item.id">
           <view class="title" :id="'title-' + item.id">{{ item.name }}</view>
-          <view class="content" v-for="(item, index) in 5" :key="index">
+          <view
+            class="content"
+            v-for="(item, index) in 5"
+            :key="index"
+            @click="goToBuy"
+          >
             <Tea />
           </view>
         </view>
       </view>
     </view>
+    <ShopPop ref="pop" />
   </view>
 </template>
 
 <script>
+import ShopPop from './shop-pop.vue'
 import Tea from './tea.vue'
 export default {
   props: {},
   data() {
     return {
+      isShow: false,
       indicatorDots: true,
       autoplay: true,
       duration: 500,
@@ -88,8 +96,12 @@ export default {
   },
   components: {
     Tea,
+    ShopPop,
   },
   methods: {
+    goToBuy() {
+      this.$refs.pop.isShow = true
+    },
     clickItem(val) {
       console.log(val)
       if (val.ischeck) {

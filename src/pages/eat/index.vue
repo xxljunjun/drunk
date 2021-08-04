@@ -4,16 +4,20 @@
       <view class="status_bar"> <!-- 这里是状态栏 --> </view>
       <view class="title"> 夏饮的茶 </view>
       <view class="location">
-        <view class="location-left">
+        <view class="location-left" @click="goToMap">
           <view class="txt-1">西丽宝能城店></view>
           <view class="txt-2">距离你669米</view>
         </view>
         <view class="location-right">
-          <view class="txt-3">自取</view>
-          <view class="txt-4">外卖</view>
+          <view class="txt-3" :class="{ active: isSell }" @click="goToself"
+            >自取</view
+          >
+          <view class="txt-4" :class="{ active: !isSell }" @click="goToSell"
+            >外卖</view
+          >
         </view>
       </view>
-      <view class="active">
+      <view class="active" @click="gotoActive">
         <view class="active-left">
           <image src="/static/logo.png" class="xing-icon" />
           <view class="txt">夏日限定：储值300元，立赠一杯</view>
@@ -22,7 +26,7 @@
       </view>
       <view class="discounts">
         <view class="discounts-left"> 外卖.牛轧糖买一送一 </view>
-        <view class="discounts-right">查看更多</view>
+        <view class="discounts-right" @click="toSeeMore">查看更多</view>
       </view>
     </view>
     <Shop />
@@ -34,17 +38,36 @@
 import Shop from './components/shop.vue'
 import TabBar from '@/components/tabBar.vue'
 export default {
+  components: {
+    TabBar,
+    Shop,
+  },
   data() {
     return {
       token: '',
+      isSell: true,
+      isShow: false,
     }
   },
   mounted() {},
   onLoad() {},
-  methods: {},
-  components: {
-    TabBar,
-    Shop,
+  methods: {
+    goToMap() {
+      console.log('跳转地图页面')
+    },
+    goToSell() {
+      console.log('跳转外卖页面')
+      this.isSell = !this.isSell
+    },
+    goToself() {
+      this.isSell = !this.isSell
+    },
+    gotoActive() {
+      console.log('跳转活动页面')
+    },
+    toSeeMore() {
+      console.log('动画更多')
+    },
   },
 }
 </script>
@@ -103,17 +126,19 @@ export default {
         height: 65rpx;
         background: #f5f5f5;
         border-radius: 45rpx;
+        .active {
+          background: #a7d500;
+          color: #fff;
+        }
         .txt-3 {
           width: 90rpx;
           height: 55rpx;
-          background: #a7d500;
           border-radius: 25rpx;
           font-size: 22rpx;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          color: #fff;
           margin-left: 10rpx;
         }
         .txt-4 {
@@ -125,6 +150,7 @@ export default {
           align-items: center;
           justify-content: center;
           margin-right: 10rpx;
+          border-radius: 25rpx;
         }
       }
     }

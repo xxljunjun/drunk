@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App'
 import store from './store'
 import Vuex from 'vuex'
+import uView from "uview-ui";
+Vue.use(uView);
 Vue.use(Vuex)
 
 Vue.config.productionTip = false

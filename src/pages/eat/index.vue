@@ -31,10 +31,14 @@
         <view class="discounts-right" @click="toSeeMore" v-if="!animationStatus"
           >查看更多</view
         >
-        <view class="discounts-animation" v-if="animationStatus">
+        <view
+          class="discounts-animation"
+          v-if="animationStatus"
+          @click="goToclose"
+        >
           <view class="jian">减</view>
           <view class="txt">限时.蛋糕卷第二件0元</view>
-          <view class="look" @click="goToclose">查看详情</view>
+          <view class="look">查看详情</view>
           <view class="circle">
             <image src="/static/logo.png" class="arrow" />
           </view>
@@ -109,7 +113,7 @@ export default {
 }
 .eat {
   color: #000;
-  padding-top: 365rpx;
+  padding-top: 420rpx;
   .fixd {
     position: fixed;
     top: 0;
@@ -119,6 +123,7 @@ export default {
     .status_bar {
       height: var(--status-bar-height);
       width: 100%;
+      margin-top: 40rpx;
     }
     .title {
       margin: 0 auto;
@@ -131,7 +136,7 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 15rpx;
+      margin-bottom: 30rpx;
       .location-left {
         display: flex;
         flex-direction: column;
@@ -210,6 +215,7 @@ export default {
         .txt {
           font-size: 22rpx;
           color: #9dc020;
+          background: #f4fcff;
         }
       }
       .active-right {
@@ -254,7 +260,7 @@ export default {
         font-size: 22rpx;
         // animation: zero-height 0.6s linear 0s 1;
         animation-name: zero-height;
-        animation-duration: 0.4s;
+        animation-duration: 0.3s;
         animation-timing-function: linear;
         animation-delay: 0s;
         animation-iteration-count: 1;

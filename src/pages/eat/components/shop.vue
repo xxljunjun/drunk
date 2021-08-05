@@ -132,7 +132,7 @@ export default {
       query.select('#title-' + val.id).boundingClientRect()
       query.exec(function (res) {
         console.log(res)
-        var miss = res[0].scrollTop + res[1].top - 200 //滑动距离
+        var miss = res[0].scrollTop + res[1].top - 220 //滑动距离
         console.log(miss)
         wx.pageScrollTo({
           scrollTop: miss,

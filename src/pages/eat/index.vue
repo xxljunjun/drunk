@@ -25,8 +25,20 @@
         <view class="active-right">{{ '>' }}</view>
       </view>
       <view class="discounts">
-        <view class="discounts-left"> 外卖.牛轧糖买一送一 </view>
-        <view class="discounts-right" @click="toSeeMore">查看更多</view>
+        <view class="discounts-left" v-if="!animationStatus">
+          外卖.牛轧糖买一送一
+        </view>
+        <view class="discounts-right" @click="toSeeMore" v-if="!animationStatus"
+          >查看更多</view
+        >
+        <view class="discounts-animation" v-if="animationStatus">
+          <view class="jian">减</view>
+          <view class="txt">限时.蛋糕卷第二件0元</view>
+          <view class="look" @click="goToclose">查看详情</view>
+          <view class="circle">
+            <image src="/static/logo.png" class="arrow" />
+          </view>
+        </view>
       </view>
     </view>
     <Shop />
@@ -44,6 +56,7 @@ export default {
   },
   data() {
     return {
+      animationStatus: false,
       token: '',
       isSell: true,
       isShow: false,
@@ -67,12 +80,33 @@ export default {
     },
     toSeeMore() {
       console.log('动画更多')
+      this.animationStatus = true
+    },
+    goToclose() {
+      this.animationStatus = false
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+@keyframes zero-height {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 20rpx;
+  }
+  50% {
+    height: 40rpx;
+  }
+  75% {
+    height: 60rpx;
+  }
+  100% {
+    height: 80rpx;
+  }
+}
 .eat {
   color: #000;
   padding-top: 365rpx;
@@ -190,6 +224,7 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       .discounts-left {
         display: flex;
         flex-direction: row;
@@ -207,6 +242,58 @@ export default {
         margin-right: 20rpx;
         color: #9dc020;
         font-size: 18rpx;
+      }
+      .discounts-animation {
+        position: absolute;
+        top: 0;
+        width: 750rpx;
+        background: #fff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 22rpx;
+        // animation: zero-height 0.6s linear 0s 1;
+        animation-name: zero-height;
+        animation-duration: 0.4s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
+        .jian {
+          height: 40rpx;
+          width: 40rpx;
+          background: #a7d500;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 12rpx 0 35rpx;
+        }
+        .txt {
+          color: #000;
+          margin-right: 20rpx;
+        }
+        .look {
+          color: #a7d500;
+        }
+        .circle {
+          height: 60rpx;
+          width: 60rpx;
+          background: #fff;
+          border-radius: 50%;
+          position: relative;
+          bottom: -50rpx;
+          left: -50rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .arrow {
+            height: 30rpx;
+            width: 30rpx;
+          }
+        }
       }
     }
   }

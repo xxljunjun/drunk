@@ -1,12 +1,8 @@
 <template>
-  <view class="car">
-    11111111111
-    <TabBar />
-  </view>
+  <view class="car"> 11111111111 </view>
 </template>
 
 <script>
-import TabBar from '@/components/tabBar.vue'
 export default {
   data() {
     return {
@@ -16,9 +12,7 @@ export default {
   mounted() {},
   onLoad() {},
   methods: {},
-  components: {
-    TabBar,
-  },
+  components: {},
 }
 </script>
 

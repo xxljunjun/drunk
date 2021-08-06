@@ -37,12 +37,10 @@
     <view class="img-box">
       <image src="/static/logo.png" class="banner" />
     </view>
-    <TabBar />
   </view>
 </template>
 
-<script>
-import TabBar from '@/components/tabBar.vue'
+<script
 export default {
   data() {
     return {
@@ -53,7 +51,6 @@ export default {
   onLoad() {},
   methods: {},
   components: {
-    TabBar,
   },
 }
 </script>
@@ -61,7 +58,6 @@ export default {
 <style lang="scss" scoped>
 .mine {
   color: #000;
-  padding-bottom: 100rpx;
   .bg {
     width: 750rpx;
     height: 640rpx;

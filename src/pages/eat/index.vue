@@ -46,16 +46,13 @@
       </view>
     </view>
     <Shop />
-    <TabBar />
   </view>
 </template>
 
 <script>
 import Shop from './components/shop.vue'
-import TabBar from '@/components/tabBar.vue'
 export default {
   components: {
-    TabBar,
     Shop,
   },
   data() {
@@ -81,6 +78,9 @@ export default {
     },
     gotoActive() {
       console.log('跳转活动页面')
+      uni.navigateTo({
+        url: '/pages/eat/components/money',
+      })
     },
     toSeeMore() {
       console.log('动画更多')

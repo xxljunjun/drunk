@@ -60,12 +60,10 @@
     <view class="img-box">
       <image src="/static/logo.png" class="banner" />
     </view>
-    <TabBar />
   </view>
 </template>
 
 <script>
-import TabBar from '@/components/tabBar.vue'
 export default {
   data() {
     return {
@@ -78,15 +76,12 @@ export default {
   mounted() {},
   onLoad() {},
   methods: {},
-  components: {
-    TabBar,
-  },
+  components: {},
 }
 </script>
 
 <style lang="scss" scoped>
 .home {
-  padding-bottom: 100rpx;
   color: #000;
   .banner-swiper {
     height: 640rpx;

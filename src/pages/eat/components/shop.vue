@@ -101,6 +101,7 @@ export default {
   methods: {
     goToBuy() {
       this.$refs.pop.isShow = true
+      this.$emit('update:shopCarStatus', false)
     },
     clickItem(val) {
       console.log(val)
@@ -156,6 +157,7 @@ export default {
     height: 100%;
     overflow: auto;
     float: left;
+    z-index: 9;
     //不显示滚动条
     &::-webkit-scrollbar {
       width: 0;

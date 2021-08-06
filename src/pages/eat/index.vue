@@ -57,15 +57,18 @@
       </view>
       <view class="car-shop-right" @click="goToBuy">选好了</view>
     </view>
-    <Shop />
+    <Shop :shopCarStatus.sync="shopCarStatus" />
+    <ShopCar ref="shopCar" :shopCarStatus.sync="shopCarStatus" />
   </view>
 </template>
 
 <script>
 import Shop from './components/shop.vue'
+import ShopCar from './components/shop-car.vue'
 export default {
   components: {
     Shop,
+    ShopCar,
   },
   data() {
     return {
@@ -91,6 +94,7 @@ export default {
     },
     popCar() {
       console.log('弹出购物车')
+      this.$refs.shopCar.isShow = !this.$refs.shopCar.isShow
     },
     goToMap() {
       console.log('跳转地图页面')
@@ -152,10 +156,11 @@ export default {
     left: 35rpx;
     width: 680rpx;
     height: 110rpx;
-    z-index: 88;
+    z-index: 999999999999999999;
     border-radius: 55rpx;
     display: flex;
     flex-direction: row;
+    box-shadow: 0 0 20rpx #ccc;
     .car-shop-left {
       width: 520rpx;
       height: 110rpx;
@@ -168,6 +173,9 @@ export default {
         margin-right: 25rpx;
         position: relative;
         top: -25rpx;
+        height: 90rpx;
+        width: 80rpx;
+        z-index: 99;
         .car-img {
           height: 90rpx;
           width: 80rpx;
@@ -194,7 +202,7 @@ export default {
   .fixd {
     position: fixed;
     top: 0;
-    z-index: 99;
+    z-index: 9;
     background: #fff;
     //uniapp自带的变量控制状态栏
     .status_bar {

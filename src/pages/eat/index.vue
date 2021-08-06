@@ -1,8 +1,10 @@
 <template>
   <view class="eat">
     <view class="fixd">
-      <view class="status_bar"> <!-- 这里是状态栏 --> </view>
-      <view class="title"> 夏饮的茶 </view>
+      <view class="status_bar"
+        >夏饮的茶
+        <!-- 这里是状态栏 -->
+      </view>
       <view class="location">
         <view class="location-left" @click="goToMap">
           <view class="txt-1">西丽宝能城店></view>
@@ -45,6 +47,16 @@
         </view>
       </view>
     </view>
+    <view class="car-shop" v-if="shopCarStatus">
+      <view class="car-shop-left">
+        <view class="car-img-box" @click="popCar"
+          ><image src="/static/logo.png" class="car-img"
+        /></view>
+
+        <view class="price">￥140.00</view>
+      </view>
+      <view class="car-shop-right">选好了</view>
+    </view>
     <Shop />
   </view>
 </template>
@@ -57,6 +69,7 @@ export default {
   },
   data() {
     return {
+      shopCarStatus: true,
       animationStatus: false,
       token: '',
       isSell: true,
@@ -66,12 +79,21 @@ export default {
   mounted() {},
   onLoad() {},
   methods: {
+    popCar() {
+      console.log('弹出购物车')
+    },
     goToMap() {
       console.log('跳转地图页面')
+      uni.navigateTo({
+        url: '/pages/eat/components/map',
+      })
     },
     goToSell() {
       console.log('跳转外卖页面')
       this.isSell = !this.isSell
+      uni.navigateTo({
+        url: '/pages/eat/components/sellLocation',
+      })
     },
     goToself() {
       this.isSell = !this.isSell
@@ -114,6 +136,51 @@ export default {
 .eat {
   color: #000;
   padding-top: 420rpx;
+  .car-shop {
+    position: fixed;
+    bottom: 10rpx;
+    left: 35rpx;
+    width: 680rpx;
+    height: 110rpx;
+    z-index: 88;
+    border-radius: 55rpx;
+    display: flex;
+    flex-direction: row;
+    .car-shop-left {
+      width: 520rpx;
+      height: 110rpx;
+      background: #fff;
+      border-radius: 55rpx 0 0 55rpx;
+      display: flex;
+      align-items: center;
+      .car-img-box {
+        margin-left: 60rpx;
+        margin-right: 25rpx;
+        position: relative;
+        top: -25rpx;
+        .car-img {
+          height: 90rpx;
+          width: 80rpx;
+        }
+      }
+      .price {
+        color: #000;
+        font-size: 30rpx;
+        font-weight: 700;
+      }
+    }
+    .car-shop-right {
+      width: 160rpx;
+      height: 110rpx;
+      background: #a7d500;
+      border-radius: 0 55rpx 55rpx 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26rpx;
+      color: #fff;
+    }
+  }
   .fixd {
     position: fixed;
     top: 0;
@@ -123,13 +190,11 @@ export default {
     .status_bar {
       height: var(--status-bar-height);
       width: 100%;
-      margin-top: 40rpx;
-    }
-    .title {
       margin: 0 auto;
       text-align: center;
-      margin-top: 10rpx;
+      margin-top: 80rpx;
       margin-bottom: 30rpx;
+      font-size: 28rpx;
     }
     .location {
       display: flex;

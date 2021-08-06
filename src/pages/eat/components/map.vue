@@ -1,6 +1,6 @@
 <template>
-  <view class="money">
-    <Top title="会员储值" :isBack="true" />
+  <view class="map">
+    <Top title="选择门店" :isBack="true" />
   </view>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.money {
+.map {
   padding-top: 76rpx;
   .status_bar {
     height: var(--status-bar-height);

@@ -1,6 +1,6 @@
 <template>
-  <view class="money">
-    <Top title="会员储值" :isBack="true" />
+  <view class="sellLocation">
+    <Top title="我的地址" :isBack="true" />
   </view>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.money {
+.sellLocation {
   padding-top: 76rpx;
   .status_bar {
     height: var(--status-bar-height);

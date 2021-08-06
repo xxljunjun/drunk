@@ -1,13 +1,12 @@
 <template>
   <view class="top">
-    <view class="left" v-if="isBack">
-      <image src="/static/icons/back.png" class="back" @click="goToBack" />
-    </view>
-    <view class="middle">
-      {{ title }}
-    </view>
-    <view class="right" v-if="isAdd">
-      <image src="/static/icons/add.png" class="add" @click="goToAdd" />
+    <view class="status_bar"
+      ><view class="left" v-if="isBack">
+        <image src="/static/icons/back.png" class="back" @click="goToBack" />
+      </view>
+      <view class="title-box">
+        {{ title }}
+      </view>
     </view>
   </view>
 </template>
@@ -22,10 +21,6 @@ export default {
     isBack: {
       type: Boolean,
       default: true,
-    },
-    isAdd: {
-      type: Boolean,
-      default: false,
     },
   },
   data() {
@@ -49,40 +44,37 @@ export default {
 
 <style lang="scss" scoped>
 .top {
-  min-height: 80rpx;
-  padding-top: 100rpx;
+  height: 140rpx;
   width: 100%;
-  // background-image: linear-gradient(180deg, #f2f2f2 0%, #d3d3d3 100%);
   background: #fff;
-  background: red;
-  box-shadow: inset 0 2px 0 0 #d2d2d2;
   position: fixed;
   top: 0;
   left: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  .left {
-    position: absolute;
-    left: 30rpx;
-    top: 5rpx;
-    .back {
-      height: 64rpx;
-      width: 64rpx;
+  //uniapp自带的变量控制状态栏
+  .status_bar {
+    height: var(--status-bar-height);
+    width: 100%;
+    margin-top: 80rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    .left {
+      margin-left: 30rpx;
+      margin-right: 10rpx;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .back {
+        height: 40rpx;
+        width: 40rpx;
+      }
     }
-  }
-  .middle {
-  }
-  .right {
-    position: absolute;
-    top: 5rpx;
-    right: 30rpx;
-    .add {
-      height: 64rpx;
-      width: 64rpx;
+    .title-box {
+      font-size: 28rpx;
+      color: #000;
     }
   }
 }

@@ -24,7 +24,7 @@
         </swiper>
         <view class="content">
           <scroll-view scroll-y="true" style="height: 630rpx">
-            <view class="content-box"> </view>
+            <Content />
           </scroll-view>
         </view>
         <view class="price-box">
@@ -47,8 +47,11 @@
 </template>
 
 <script>
+import Content from './content.vue'
 export default {
-  components: {},
+  components: {
+    Content,
+  },
   props: {},
   data() {
     return {

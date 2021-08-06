@@ -43,6 +43,22 @@
 				"navigationStyle": "custom",
 				"animationType": "none"
 			}
+		},
+		{
+			"path": "pages/eat/components/map",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/eat/components/sellLocation",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
 		}
 	],
 	"globalStyle": {

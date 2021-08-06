@@ -59,6 +59,14 @@
 				"navigationStyle": "custom",
 				"animationType": "none"
 			}
+		},
+		{
+			"path": "pages/eat/components/buy",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
 		}
 	],
 	"globalStyle": {

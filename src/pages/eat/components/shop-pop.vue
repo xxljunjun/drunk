@@ -82,6 +82,7 @@ export default {
     },
     addToShop() {
       this.isShow = false
+      uni.$emit('updateNum', true)
     },
   },
 }

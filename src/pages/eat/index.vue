@@ -55,7 +55,7 @@
 
         <view class="price">￥140.00</view>
       </view>
-      <view class="car-shop-right">选好了</view>
+      <view class="car-shop-right" @click="goToBuy">选好了</view>
     </view>
     <Shop />
   </view>
@@ -69,7 +69,7 @@ export default {
   },
   data() {
     return {
-      shopCarStatus: true,
+      shopCarStatus: false,
       animationStatus: false,
       token: '',
       isSell: true,
@@ -77,8 +77,18 @@ export default {
     }
   },
   mounted() {},
-  onLoad() {},
+  onLoad() {
+    uni.$on('updateNum', (data) => {
+      this.shopCarStatus = true
+      console.log('监听到事件来自 update ，携带参数 msg 为：' + data)
+    })
+  },
   methods: {
+    goToBuy() {
+      uni.navigateTo({
+        url: '/pages/eat/components/buy',
+      })
+    },
     popCar() {
       console.log('弹出购物车')
     },

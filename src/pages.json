@@ -84,33 +84,35 @@
 	},
 	"tabBar": {
 		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
+		"selectedColor": "#a7d500",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
+		"iconWidth": "10px",
+		"fontSize": "40px",
 		"list": [
 			{
 				"pagePath": "pages/home/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
-				"text": "组件"
+				"iconPath": "static/tab/home.png",
+				"selectedIconPath": "static/tab/home-s.png",
+				"text": "首页"
 			},
 			{
 				"pagePath": "pages/eat/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
-				"text": "接口"
+				"iconPath": "static/tab/drunk.png",
+				"selectedIconPath": "static/tab/drunk-s.png",
+				"text": "点餐"
 			},
 			{
 				"pagePath": "pages/car/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
-				"text": "接口"
+				"iconPath": "static/tab/sell.png",
+				"selectedIconPath": "static/tab/sell-s.png",
+				"text": "订单"
 			},
 			{
 				"pagePath": "pages/mine/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
-				"text": "接口"
+				"iconPath": "static/tab/mine.png",
+				"selectedIconPath": "static/tab/mine-s.png",
+				"text": "我的"
 			}
 		]
 	},

@@ -3,8 +3,8 @@
     <u-popup v-model="isShow" mode="center">
       <view class="box">
         <view class="close-box">
-          <image src="/static/logo.png" class="share" @click="goToShare" />
-          <image src="/static/logo.png" class="close" @click="gotoClose" />
+          <image src="/static/share.png" class="share" @click="goToShare" />
+          <image src="/static/close.png" class="close" @click="gotoClose" />
         </view>
         <swiper
           class="swiper"

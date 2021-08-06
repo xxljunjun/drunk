@@ -7,7 +7,12 @@
       </view>
       <view class="location">
         <view class="location-left" @click="goToMap">
-          <view class="txt-1">西丽宝能城店></view>
+          <view class="txt-1-box">
+            <view class="txt-1">西丽宝能城店</view>
+            <view class="arrow">
+              <image src="/static/left.png" class="arrow-img" />
+            </view>
+          </view>
           <view class="txt-2">距离你669米</view>
         </view>
         <view class="location-right">
@@ -21,10 +26,12 @@
       </view>
       <view class="active" @click="gotoActive">
         <view class="active-left">
-          <image src="/static/logo.png" class="xing-icon" />
+          <image src="/static/love.png" class="xing-icon" />
           <view class="txt">夏日限定：储值300元，立赠一杯</view>
         </view>
-        <view class="active-right">{{ '>' }}</view>
+        <view class="active-right">
+          <image src="/static/left.png" class="left-img" />
+        </view>
       </view>
       <view class="discounts">
         <view class="discounts-left" v-if="!animationStatus">
@@ -42,7 +49,7 @@
           <view class="txt">限时.蛋糕卷第二件0元</view>
           <view class="look">查看详情</view>
           <view class="circle">
-            <image src="/static/logo.png" class="arrow" />
+            <image src="/static/down.png" class="arrow" />
           </view>
         </view>
       </view>
@@ -225,11 +232,23 @@ export default {
         flex-direction: column;
         justify-content: center;
         margin-left: 15rpx;
-        .txt-1 {
-          font-size: 28rpx;
-          color: #000;
+        .txt-1-box {
           margin-bottom: 20rpx;
-          line-height: 28rpx;
+          display: flex;
+          align-items: center;
+          .arrow {
+            margin-left: 10rpx;
+            .arrow-img {
+              height: 20rpx;
+              width: 20rpx;
+            }
+          }
+          .txt-1 {
+            font-size: 28rpx;
+            color: #000;
+
+            line-height: 28rpx;
+          }
         }
         .txt-2 {
           color: #a3a7a6;
@@ -303,6 +322,10 @@ export default {
       }
       .active-right {
         margin-right: 20rpx;
+        .left-img {
+          width: 20rpx;
+          height: 20rpx;
+        }
       }
     }
     .discounts {

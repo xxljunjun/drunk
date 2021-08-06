@@ -4,7 +4,7 @@
       <view class="box">
         <view class="del-box" @click="delAllShop">
           <view class="img-box">
-            <image src="/static/logo.png" class="del-img" />
+            <image src="/static/del.png" class="del-img" />
           </view>
           <view class="txt">清空购物车</view>
         </view>

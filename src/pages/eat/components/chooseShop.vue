@@ -6,7 +6,7 @@
         <view class="line">
           <view class="box">
             <view class="choose">
-              <image src="/static/left.png" class="choose-img" />
+              <image src="/static/choose-s.png" class="choose-img" />
             </view>
             <view class="txt">
               <view class="txt-1"> 深圳北站高铁站</view>

@@ -11,6 +11,12 @@
 #### 模块
 + home模块
 + 点餐模块
+	+ index
+	+ map
+	+ sellLocation
+	+ activeDetail
+	+ buy
+	+ money
 + 订单模块
 + mine模块
 

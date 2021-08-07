@@ -1,5 +1,6 @@
 <template>
   <view class="eat">
+    <view class="mask" v-if="maskStatus" @click="goToclose"></view>
     <view class="fixd">
       <view class="status_bar"
         >夏饮的茶
@@ -34,20 +35,21 @@
         </view>
       </view>
       <view class="discounts">
-        <view class="discounts-left" v-if="!animationStatus">
+        <view class="discounts-left" v-if="!animationStatus" @click="toSeeMore">
           外卖.牛轧糖买一送一
         </view>
-        <view class="discounts-right" @click="toSeeMore" v-if="!animationStatus"
-          >查看更多</view
-        >
         <view
-          class="discounts-animation"
-          v-if="animationStatus"
-          @click="goToclose"
+          class="discounts-right"
+          v-if="!animationStatus"
+          @click="toSeeMore"
         >
+          <view>查看更多</view>
+          <image src="/static/down.png" class="arrow" />
+        </view>
+        <view class="discounts-animation" v-if="animationStatus">
           <view class="jian">减</view>
           <view class="txt">限时.蛋糕卷第二件0元</view>
-          <view class="look">查看详情</view>
+          <view class="look" @click="goToDetail">查看详情</view>
           <view class="circle">
             <image src="/static/down.png" class="arrow" />
           </view>
@@ -66,16 +68,19 @@
     </view>
     <Shop :shopCarStatus.sync="shopCarStatus" />
     <ShopCar ref="shopCar" :shopCarStatus.sync="shopCarStatus" />
+    <ChooseShop />
   </view>
 </template>
 
 <script>
 import Shop from './components/shop.vue'
 import ShopCar from './components/shop-car.vue'
+import ChooseShop from './components/chooseShop.vue'
 export default {
   components: {
     Shop,
     ShopCar,
+    ChooseShop,
   },
   data() {
     return {
@@ -84,6 +89,7 @@ export default {
       token: '',
       isSell: true,
       isShow: false,
+      maskStatus: false,
     }
   },
   mounted() {},
@@ -96,7 +102,7 @@ export default {
   methods: {
     goToBuy() {
       uni.navigateTo({
-        url: '/pages/eat/components/buy',
+        url: '/pages/eat/buy',
       })
     },
     popCar() {
@@ -106,14 +112,14 @@ export default {
     goToMap() {
       console.log('跳转地图页面')
       uni.navigateTo({
-        url: '/pages/eat/components/map',
+        url: '/pages/eat/map',
       })
     },
     goToSell() {
       console.log('跳转外卖页面')
       this.isSell = !this.isSell
       uni.navigateTo({
-        url: '/pages/eat/components/sellLocation',
+        url: '/pages/eat/sellLocation',
       })
     },
     goToself() {
@@ -122,15 +128,23 @@ export default {
     gotoActive() {
       console.log('跳转活动页面')
       uni.navigateTo({
-        url: '/pages/eat/components/money',
+        url: '/pages/eat/money',
       })
     },
     toSeeMore() {
       console.log('动画更多')
       this.animationStatus = true
+      this.maskStatus = true
     },
     goToclose() {
       this.animationStatus = false
+      this.maskStatus = false
+    },
+    goToDetail() {
+      console.log('跳转地图页面')
+      uni.navigateTo({
+        url: '/pages/eat/activeDetail',
+      })
     },
   },
 }
@@ -157,6 +171,18 @@ export default {
 .eat {
   color: #000;
   padding-top: 420rpx;
+  height: 100%;
+  width: 100%;
+  .mask {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
   .car-shop {
     position: fixed;
     bottom: 10rpx;
@@ -353,7 +379,14 @@ export default {
       .discounts-right {
         margin-right: 20rpx;
         color: #9dc020;
-        font-size: 18rpx;
+        font-size: 22rpx;
+        display: flex;
+        align-items: center;
+        .arrow {
+          height: 20rpx;
+          width: 20rpx;
+          margin-left: 10rpx;
+        }
       }
       .discounts-animation {
         position: absolute;

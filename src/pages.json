@@ -21,6 +21,46 @@
 			}
 		},
 		{
+			"path": "pages/eat/money",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/eat/map",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/eat/sellLocation",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/eat/buy",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/eat/activeDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
 			"path": "pages/car/index",
 			"style": {
 				"navigationBarTitleText": "",
@@ -30,38 +70,6 @@
 		},
 		{
 			"path": "pages/mine/index",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"animationType": "none"
-			}
-		},
-		{
-			"path": "pages/eat/components/money",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"animationType": "none"
-			}
-		},
-		{
-			"path": "pages/eat/components/map",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"animationType": "none"
-			}
-		},
-		{
-			"path": "pages/eat/components/sellLocation",
-			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"animationType": "none"
-			}
-		},
-		{
-			"path": "pages/eat/components/buy",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom",

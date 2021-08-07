@@ -157,7 +157,7 @@ export default {
     height: 100%;
     overflow: auto;
     float: left;
-    z-index: 9;
+    z-index: 5;
     //不显示滚动条
     &::-webkit-scrollbar {
       width: 0;

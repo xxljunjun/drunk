@@ -23,7 +23,7 @@
           </swiper-item>
         </swiper>
         <view class="content">
-          <scroll-view scroll-y="true" style="height: 630rpx">
+          <scroll-view scroll-y="true">
             <Content />
           </scroll-view>
         </view>
@@ -89,6 +89,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@keyframes xxl-scroll {
+  from {
+    height: 0;
+    display: none;
+  }
+  to {
+    height: 630rpx;
+    display: block;
+    overflow: auto;
+  }
+}
 @mixin xxl-ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -103,10 +114,13 @@ export default {
   -webkit-box-orient: vertical;
   word-break: break-word;
 }
+scroll-view {
+  height: 630rpx;
+  animation: xxl-scroll 0.3s linear 0s 1;
+}
 .shop-pop {
   .box {
     width: 690rpx;
-    height: 100%;
     background: #fff;
     position: relative;
     .swiper {
@@ -135,8 +149,6 @@ export default {
       }
     }
     .content {
-      .content-box {
-      }
     }
     .price-box {
       height: 135rpx;

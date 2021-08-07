@@ -29,12 +29,22 @@
         </view>
       </view>
     </u-popup>
+    <Comfire
+      ref="comfire"
+      title="提示"
+      text="确认清空购物车吗？"
+      @comfire="comfire"
+      @cancle="cancle"
+    />
   </view>
 </template>
 
 <script>
+import Comfire from '@/components/comfire.vue'
 export default {
-  components: {},
+  components: {
+    Comfire,
+  },
   data() {
     return {
       isShow: false,
@@ -42,9 +52,15 @@ export default {
   },
   methods: {
     delAllShop() {
+      this.$refs.comfire.isShow = true
+    },
+    comfire() {
       console.log('删除所有')
       this.isShow = false
       this.$emit('update:shopCarStatus', false)
+    },
+    cancle() {
+      console.log('取消')
     },
   },
 }

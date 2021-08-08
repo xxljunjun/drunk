@@ -90,4 +90,17 @@ app.$mount()
 #### 七、集成Uview组件库
 + 照着官网去搬就好了
 
+#### 八、postcss.config错误gitHub
+```
+module.exports = { 
+
+    plugins: { 
+  
+      'autoprefixer': {browsers: 'last 5 version'} 
+  
+    } 
+  
+  }
+```
+
 

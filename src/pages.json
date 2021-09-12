@@ -13,6 +13,14 @@
 			}
 		},
 		{
+			"path": "pages/home/bonusMall",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom", 
+				"animationType": "none" 
+			}
+		},
+		{
 			"path": "pages/eat/index",
 			"style": {
 				"navigationBarTitleText": "",
@@ -70,6 +78,30 @@
 		},
 		{
 			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/mine/members",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/mine/price",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"animationType": "none"
+			}
+		},
+		{
+			"path": "pages/mine/user",
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom",

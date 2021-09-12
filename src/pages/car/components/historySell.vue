@@ -9,20 +9,18 @@
         bar-width="60"
         active-color="#a7d500"
         bg-color="#f3f4f8"
-        height="110"
       ></u-tabs>
       <view class="one" v-if="current == 0">
-          <view v-for="(item,index) in 2" :key="index" class="item">
-
-          </view>
+           <Nodata :isgif="false" />
       </view>
-      <view class="two" v-if="current == 1">22222222222222</view>
-      <view class="threen" v-if="current == 2">22222222222222</view>
+      <view class="two" v-if="current == 1"> <Nodata :isgif="false" /></view>
+      <view class="threen" v-if="current == 2"> <Nodata :isgif="false" /></view>
     </view>
   </view>
 </template>
 
 <script>
+import Nodata from "@/components/nodata.vue";
 export default {
   data() {
     return {
@@ -40,6 +38,9 @@ export default {
       current: 0,
     };
   },
+  components: {
+    Nodata,
+  },
   methods: {
     change(index) {
       this.current = index;
@@ -49,32 +50,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.u-tab-item {
-  position: relative !important;
-  top: 10rpx !important;
-}
-.u-tab-bar {
-  margin-bottom: 20rpx !important;
-}
-.historySell {
-  /deep/.u-tab-item {
-    position: relative !important;
-    top: 10rpx !important;
-  }
-  /deep/.u-tab-bar {
-    margin-bottom: 20rpx !important;
-  }
-}
-.one,.two,.threen{
-    padding: 0 20rpx;
-    background: #f3f4f8;
-}
-.item{
-    height: 370rpx;
-    width: 700rpx;
-    background: #fff;
-    margin-bottom: 20rpx;
-    border-radius: 10rpx;
-    padding: 30rpx;
-}
+// .u-tab-item {
+//   position: relative !important;
+//   top: 10rpx !important;
+// }
+// .u-tab-bar {
+//   margin-bottom: 20rpx !important;
+// }
+// .historySell {
+//   /deep/.u-tab-item {
+//     position: relative !important;
+//     top: 10rpx !important;
+//   }
+//   /deep/.u-tab-bar {
+//     margin-bottom: 20rpx !important;
+//   }
+// }
+// .one,.two,.threen{
+//     padding: 0 20rpx;
+//     background: #f3f4f8;
+// }
+
 </style>

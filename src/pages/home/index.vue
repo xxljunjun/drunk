@@ -10,6 +10,7 @@
         :circular="true"
         indicator-color="rgba(255, 255, 255, 0.4)"
         indicator-active-color="rgba(255, 255, 255, 1)"
+         @click="goToShop"
       >
         <swiper-item>
           <view class="swiper-item">
@@ -29,26 +30,26 @@
       </swiper>
     </view>
     <view class="box">
-      <view class="box-left">
+      <view class="box-left" @click="goToShop">
         <image src="/static/logo.png" class="bao" />
         <view class="txt-1">自取</view>
         <view class="txt-2">在线点，到店取</view>
       </view>
-      <view class="box-right">
+      <view class="box-right"  @click="goToShop">
         <image src="/static/logo.png" class="car" />
         <view class="txt-1">外送</view>
         <view class="txt-2">轻松点，送到家</view>
       </view>
     </view>
     <view class="shop">
-      <view class="shop-left">
+      <view class="shop-left" @click="goToMall">
         <image src="/static/logo.png" class="money" />
         <view class="txt">
           <view class="txt-1">积分商城</view>
           <view class="txt-2">兑换潮流周边</view>
         </view>
       </view>
-      <view class="shop-right">
+      <view class="shop-right"  @click="gotoActive">
         <image src="/static/logo.png" class="biao" />
         <view class="txt">
           <view class="txt-1">亦.会员</view>
@@ -57,7 +58,7 @@
       </view>
     </view>
     <view class="title">周周有礼</view>
-    <view class="img-box">
+    <view class="img-box"  @click="goToShop">
       <image src="/static/logo.png" class="banner" />
     </view>
   </view>
@@ -75,7 +76,24 @@ export default {
   },
   mounted() {},
   onLoad() {},
-  methods: {},
+  methods: {
+    goToShop() {
+      uni.switchTab({
+        url: "/pages/eat/index",
+      });
+    },
+    gotoActive() {
+      console.log('跳转活动页面')
+      uni.navigateTo({
+        url: '/pages/eat/money',
+      })
+    },
+    goToMall(){
+      uni.navigateTo({
+        url: '/pages/home/bonusMall',
+      })
+    }
+  },
   components: {},
 }
 </script>

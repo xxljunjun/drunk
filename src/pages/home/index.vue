@@ -164,7 +164,7 @@ export default {
     .txt-2 {
       font-size: 26rpx;
       line-height: 32rpx;
-      color: #93c96d;
+      color: #a7d500;
     }
   }
   .shop {

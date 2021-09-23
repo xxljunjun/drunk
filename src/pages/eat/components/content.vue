@@ -62,7 +62,7 @@ export default {
       height: 35rpx;
       background: #fbf2f3;
       color: #eea3b2;
-      font-size: 20rpx;
+      font-size: 22rpx;
       margin-right: 10rpx;
       padding: 0 10rpx;
       margin-bottom: 10rpx;
@@ -71,12 +71,12 @@ export default {
   .text {
     margin-bottom: 70rpx;
     color: #646568;
-    font-size: 22rpx;
+    font-size: 24rpx;
     white-space: wrap;
   }
   .box {
     .line {
-      font-size: 22rpx;
+      font-size: 24rpx;
       color: #000;
     }
     .add-box {
@@ -92,7 +92,7 @@ export default {
         height: 65rpx;
         background: #f6f6f6;
         color: #626367;
-        font-size: 20rpx;
+        font-size: 22rpx;
         margin-right: 20rpx;
         padding: 0 30rpx;
         margin-bottom: 20rpx;

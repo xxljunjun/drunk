@@ -1,21 +1,21 @@
 <template>
   <view class="mine">
     <view class="bg" @click="goToShop">
-      <image src="/static/logo.png" class="bg-img" />
+      <image src="/static/img_2.jpg" class="bg-img" />
     </view>
     <view class="box">
       <view class="top">
         <view class="myName" @click="goToUser">小溪流</view>
-        <view class="mySlider" @click="goToMembers">
+        <view class="mySlider" @click="goToUser">
           <view class="slider"></view>
           <view class="number">143/200</view>
         </view>
-        <view class="myMembers" @click="goToMembers">
+        <view class="myMembers" @click="goToUser">
           <view class="rank">V3</view>
           <view class="now">需57成长值升级V4</view>
         </view>
         <view class="myHeader" @click="goToUser">
-          <image src="/static/logo.png" class="header-img" />
+          <image src="/static/img_3.jpg" class="header-img" />
         </view>
       </view>
       <view class="bottom">
@@ -27,7 +27,7 @@
           <view class="num">576.5</view>
           <view class="txt">钱包余额（元）</view>
         </view>
-        <view class="three mainn" @click="goToMall">
+        <view class="three mainn" @click="goToPrice">
           <view class="num">2000</view>
           <view class="txt">积分</view>
         </view>
@@ -35,7 +35,7 @@
     </view>
     <view class="title">周周有礼</view>
     <view class="img-box" @click="goToShop">
-      <image src="/static/logo.png" class="banner" />
+      <image src="/static/img_4.jpg" class="banner" />
     </view>
   </view>
 </template>

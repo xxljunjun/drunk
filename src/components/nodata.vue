@@ -1,8 +1,8 @@
 <template>
   <view class="nodata-box">
     <view class="nodata">
-      <img src="/static/logo.png" alt="" class="nodataImg" v-if="isgif" />
-      <img src="/static/logo.png" alt="" class="nodataImg" v-else />
+      <img src="/static/icons/nodata.png" alt="" class="nodataImg" v-if="isgif" />
+      <img src="/static/icons/nodata.png" alt="" class="nodataImg" v-else />
       <view  v-if="isgif">
         <view class="txt_1">你还没有点餐</view>
         <view class="txt_2">快去犒劳一下自己吧~</view>

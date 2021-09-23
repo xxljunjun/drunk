@@ -18,7 +18,7 @@
         >
           <swiper-item>
             <view class="swiper-item">
-              <image src="/static/logo.png" class="swiper-img" />
+              <image src="/static/img_1.jpg" class="swiper-img" />
             </view>
           </swiper-item>
         </swiper>
@@ -191,7 +191,7 @@ scroll-view {
         }
         .nums {
           color: #c4c5c8;
-          font-size: 22rpx;
+          font-size: 24rpx;
           margin: 0 20rpx;
         }
         .add {
@@ -216,7 +216,7 @@ scroll-view {
       justify-content: center;
       align-items: center;
       color: #fff;
-      font-size: 26rpx;
+      font-size: 28rpx;
       font-weight: 700;
     }
   }

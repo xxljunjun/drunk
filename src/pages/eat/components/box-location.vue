@@ -53,7 +53,7 @@ export default {
     .txt-1 {
       margin-bottom: 30rpx;
       color: #000;
-      font-size: 22rpx;
+      font-size: 24rpx;
       .box {
         min-width: 60rpx;
         height: 30rpx;
@@ -62,11 +62,11 @@ export default {
         line-height: 30rpx;
         background: #a7d500;
         margin-left: 20rpx;
-        font-size: 12rpx;
+        font-size: 18rpx;
       }
     }
     .txt-2 {
-      font-size: 18rpx;
+      font-size: 20rpx;
       color: #5f5f5f;
       display: flex;
       align-items: center;
@@ -78,7 +78,7 @@ export default {
       }
     }
     .txt-3 {
-      font-size: 18rpx;
+      font-size: 20rpx;
       color: #5f5f5f;
       display: flex;
       align-items: center;
@@ -97,11 +97,11 @@ export default {
     padding-left: 35rpx;
     .box-1 {
       color: #000;
-      font-size: 22rpx;
+      font-size: 24rpx;
       margin-bottom: 15rpx;
     }
     .box-2 {
-      font-size: 18rpx;
+      font-size: 20rpx;
       color: #5f5f5f;
       margin-bottom: 15rpx;
     }

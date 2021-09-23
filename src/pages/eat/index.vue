@@ -59,7 +59,7 @@
     <view class="car-shop" v-if="shopCarStatus">
       <view class="car-shop-left">
         <view class="car-img-box" @click="popCar"
-          ><image src="/static/logo.png" class="car-img"
+          ><image src="/static/love.png" class="car-img"
         /></view>
 
         <view class="price">￥140.00</view>
@@ -101,8 +101,11 @@ export default {
   },
   methods: {
     goToBuy() {
-      uni.navigateTo({
-        url: '/pages/eat/buy',
+      // uni.navigateTo({
+      //   url: '/pages/eat/buy',
+      // })
+      uni.switchTab({
+        url: '/pages/home/index',
       })
     },
     popCar() {

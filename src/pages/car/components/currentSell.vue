@@ -34,12 +34,12 @@ export default {
     .txt_1 {
       margin-bottom: 10px;
       color: #a3a7a6;
-      font-size: 14px;
+      font-size: 20px;
     }
     .txt_2 {
       margin-bottom: 30px;
       color: #a3a7a6;
-      font-size: 14px;
+      font-size: 20px;
     }
     .btn {
       height: 50px;

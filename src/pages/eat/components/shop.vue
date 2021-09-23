@@ -25,17 +25,17 @@
         >
           <swiper-item>
             <view class="swiper-item">
-              <image src="/static/logo.png" class="swiper-img" />
+              <image src="/static/img_1.jpg" class="swiper-img" />
             </view>
           </swiper-item>
           <swiper-item>
             <view class="swiper-item">
-              <image src="/static/logo.png" class="swiper-img" />
+              <image src="/static/img_2.jpg" class="swiper-img" />
             </view>
           </swiper-item>
           <swiper-item>
             <view class="swiper-item">
-              <image src="/static/logo.png" class="swiper-img" />
+              <image src="/static/img_3.jpg" class="swiper-img" />
             </view>
           </swiper-item>
         </swiper>
@@ -170,7 +170,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 22rpx;
+      font-size: 24rpx;
       color: #000;
       box-sizing: border-box;
       &.active {
@@ -202,7 +202,7 @@ export default {
     }
     .main {
       .title {
-        font-size: 22rpx;
+        font-size: 24rpx;
         color: #ccc;
         margin-bottom: 50rpx;
       }

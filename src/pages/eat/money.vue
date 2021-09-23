@@ -3,7 +3,7 @@
     <Top title="会员储值" :isBack="true" />
     <view class="money-box">
       <view class="img-box">
-        <image src="/static/logo.png" class="img" />
+        <image src="/static/img_4.jpg" class="img" />
       </view>
       <view class="tab-box">
          <view class="tab" 

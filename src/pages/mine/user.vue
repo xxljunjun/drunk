@@ -75,12 +75,12 @@ export default {
         width: 60rpx;
       }
       .txt {
-        font-size: 22rpx;
+        font-size: 28rpx;
         color: #000;
       }
       .txt_1 {
         color: #959595;
-        font-size: 22rpx;
+        font-size: 28rpx;
       }
     }
   }
@@ -93,7 +93,7 @@ export default {
     align-items: center;
     line-height: 90rpx;
     color: #000;
-    font-size: 24rpx;
+    font-size: 28rpx;
     margin: 290rpx auto 0;
     background: #a7d500;
   }

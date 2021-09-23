@@ -14,43 +14,43 @@
       >
         <swiper-item>
           <view class="swiper-item">
-            <image src="/static/logo.png" class="swiper-img" />
+            <image src="/static/img_1.jpg" class="swiper-img" />
           </view>
         </swiper-item>
         <swiper-item>
           <view class="swiper-item">
-            <image src="/static/logo.png" class="swiper-img" />
+            <image src="/static/img_2.jpg" class="swiper-img" />
           </view>
         </swiper-item>
         <swiper-item>
           <view class="swiper-item">
-            <image src="/static/logo.png" class="swiper-img" />
+            <image src="/static/img_3.jpg" class="swiper-img" />
           </view>
         </swiper-item>
       </swiper>
     </view>
     <view class="box">
       <view class="box-left" @click="goToShop">
-        <image src="/static/logo.png" class="bao" />
+        <image src="/static/nai.png" class="bao" />
         <view class="txt-1">自取</view>
         <view class="txt-2">在线点，到店取</view>
       </view>
       <view class="box-right"  @click="goToShop">
-        <image src="/static/logo.png" class="car" />
+        <image src="/static/shop.png" class="car" />
         <view class="txt-1">外送</view>
         <view class="txt-2">轻松点，送到家</view>
       </view>
     </view>
     <view class="shop">
-      <view class="shop-left" @click="goToMall">
-        <image src="/static/logo.png" class="money" />
+      <view class="shop-left" @click="gotoActive">
+        <image src="/static/sell.png" class="money" />
         <view class="txt">
           <view class="txt-1">积分商城</view>
           <view class="txt-2">兑换潮流周边</view>
         </view>
       </view>
       <view class="shop-right"  @click="gotoActive">
-        <image src="/static/logo.png" class="biao" />
+        <image src="/static/man.png" class="biao" />
         <view class="txt">
           <view class="txt-1">亦.会员</view>
           <view class="txt-2">更多会员权益</view>
@@ -59,7 +59,7 @@
     </view>
     <view class="title">周周有礼</view>
     <view class="img-box"  @click="goToShop">
-      <image src="/static/logo.png" class="banner" />
+      <image src="/static/img_4.jpg" class="banner" />
     </view>
   </view>
 </template>

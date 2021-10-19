@@ -73,7 +73,7 @@ export default {
       }
     }
     .title-box {
-      font-size: 28rpx;
+      font-size: 30rpx;
       color: #000;
     }
   }

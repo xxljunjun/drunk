@@ -12,7 +12,7 @@
           <view class="aShop" v-for="(item, index) in 5" :key="index">
             <view class="aShop-left">
               <view class="img-box">
-                <image src="/static/logo.png" class="shop-img" />
+                <image src="/static/img_1.jpg" class="shop-img" />
               </view>
               <view class="txt-box">
                 <view class="txt-1">霸气金玉黄皮</view>
@@ -88,7 +88,7 @@ export default {
       }
       .txt {
         color: #68696d;
-        font-size: 22rpx;
+        font-size: 24rpx;
         margin: 0 40rpx 0 10rpx;
       }
     }
@@ -126,12 +126,12 @@ export default {
               margin-bottom: 15rpx;
             }
             .txt-2 {
-              font-size: 22rpx;
+              font-size: 24rpx;
               color: #ccc;
               margin-bottom: 40rpx;
             }
             .txt-3 {
-              font-size: 22rpx;
+              font-size: 24rpx;
               color: #000;
             }
           }
@@ -153,7 +153,7 @@ export default {
           }
           .nums {
             color: #c4c5c8;
-            font-size: 22rpx;
+            font-size: 24rpx;
             margin: 0 20rpx;
           }
           .add {

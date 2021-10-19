@@ -10,46 +10,47 @@
         :circular="true"
         indicator-color="rgba(255, 255, 255, 0.4)"
         indicator-active-color="rgba(255, 255, 255, 1)"
+         @click="goToShop"
       >
         <swiper-item>
           <view class="swiper-item">
-            <image src="/static/logo.png" class="swiper-img" />
+            <image src="/static/img_1.jpg" class="swiper-img" />
           </view>
         </swiper-item>
         <swiper-item>
           <view class="swiper-item">
-            <image src="/static/logo.png" class="swiper-img" />
+            <image src="/static/img_2.jpg" class="swiper-img" />
           </view>
         </swiper-item>
         <swiper-item>
           <view class="swiper-item">
-            <image src="/static/logo.png" class="swiper-img" />
+            <image src="/static/img_3.jpg" class="swiper-img" />
           </view>
         </swiper-item>
       </swiper>
     </view>
     <view class="box">
-      <view class="box-left">
-        <image src="/static/logo.png" class="bao" />
+      <view class="box-left" @click="goToShop">
+        <image src="/static/nai.png" class="bao" />
         <view class="txt-1">自取</view>
         <view class="txt-2">在线点，到店取</view>
       </view>
-      <view class="box-right">
-        <image src="/static/logo.png" class="car" />
+      <view class="box-right"  @click="goToShop">
+        <image src="/static/shop.png" class="car" />
         <view class="txt-1">外送</view>
         <view class="txt-2">轻松点，送到家</view>
       </view>
     </view>
     <view class="shop">
-      <view class="shop-left">
-        <image src="/static/logo.png" class="money" />
+      <view class="shop-left" @click="gotoActive">
+        <image src="/static/sell.png" class="money" />
         <view class="txt">
           <view class="txt-1">积分商城</view>
           <view class="txt-2">兑换潮流周边</view>
         </view>
       </view>
-      <view class="shop-right">
-        <image src="/static/logo.png" class="biao" />
+      <view class="shop-right"  @click="gotoActive">
+        <image src="/static/man.png" class="biao" />
         <view class="txt">
           <view class="txt-1">亦.会员</view>
           <view class="txt-2">更多会员权益</view>
@@ -57,8 +58,8 @@
       </view>
     </view>
     <view class="title">周周有礼</view>
-    <view class="img-box">
-      <image src="/static/logo.png" class="banner" />
+    <view class="img-box"  @click="goToShop">
+      <image src="/static/img_4.jpg" class="banner" />
     </view>
   </view>
 </template>
@@ -75,7 +76,24 @@ export default {
   },
   mounted() {},
   onLoad() {},
-  methods: {},
+  methods: {
+    goToShop() {
+      uni.switchTab({
+        url: "/pages/eat/index",
+      });
+    },
+    gotoActive() {
+      console.log('跳转活动页面')
+      uni.navigateTo({
+        url: '/pages/eat/money',
+      })
+    },
+    goToMall(){
+      uni.navigateTo({
+        url: '/pages/home/bonusMall',
+      })
+    }
+  },
   components: {},
 }
 </script>
@@ -146,7 +164,7 @@ export default {
     .txt-2 {
       font-size: 26rpx;
       line-height: 32rpx;
-      color: #93c96d;
+      color: #a7d500;
     }
   }
   .shop {

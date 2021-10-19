@@ -94,7 +94,7 @@ export default {
             margin-bottom: 10rpx;
           }
           .txt-2 {
-            font-size: 20rpx;
+            font-size: 22rpx;
             color: #626367;
             line-height: 30rpx;
           }

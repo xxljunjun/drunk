@@ -1,7 +1,7 @@
 <template>
   <view class="tea">
     <view class="tea-left">
-      <image src="/static/logo.png" class="shop-img" />
+      <image src="/static/img_1.jpg" class="shop-img" />
     </view>
     <view class="tea-right">
       <view class="title">霸气金玉黄皮</view>
@@ -76,7 +76,7 @@ export default {
         height: 35rpx;
         background: #fbf2f3;
         color: #eea3b2;
-        font-size: 20rpx;
+        font-size: 22rpx;
         margin-right: 10rpx;
         padding: 0 10rpx;
         margin-bottom: 10rpx;
@@ -85,7 +85,7 @@ export default {
     .content {
       @include xxl-ellipsis-two;
       color: #949799;
-      font-size: 20rpx;
+      font-size: 22rpx;
       margin-top: 5rpx;
     }
     .price-box {
@@ -108,7 +108,7 @@ export default {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        font-size: 22rpx;
+        font-size: 24rpx;
         color: #fff;
       }
     }

@@ -1,6 +1,7 @@
 ### 该项目是仿奈雪的电商类微信小程序
 
 ## 开发
+
 ```bash
 # 克隆项目
 git clone https://github.com/xxljunjun/drunk.git
@@ -19,6 +20,7 @@ npm install
 ```
 
 ## 发布
+
 ```bash
 # 微信者开发工具中上传版本代码
 
